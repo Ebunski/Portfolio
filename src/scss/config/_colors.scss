@@ -1,0 +1,23 @@
+///bg
+:root {
+  --hue: 250;
+  --hue2: 25;
+}
+
+$primary-color: hsl(var(--hue), 69%, 61%);
+$primary-color-lighter: hsl(var(--hue), 92%, 85%);
+$secondary-color: hsl(var(--hue2), 57%, 53%);
+$secondary-color-lighter: hsl(var(--hue2), 69%, 70%);
+$background-color: hsl(var(--hue), 60%, 99%);
+$surface-color: hsl(var(--hue), 60%, 9 0%);
+$gradient: linear-gradient($primary-color, #e91e63);
+$disabled: hsl(var(--hue), 90%, 85%);
+
+///text
+$text-color: hsl(var(--hue), 8%, 45%);
+$text-color-lighter: hsl(var(--hue), 8%, 65%);
+$accent-text: hsl(var(--hue2), 57%, 53%);
+
+// $light-shadow-dark: 6px 6px 16px 0 rgba(0, 0, 0, 0.51),
+//   -6px -6px 16px 0 rgba(255, 255, 255, 0.05);
+// $dark-shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);

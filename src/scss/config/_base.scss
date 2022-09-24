@@ -1,0 +1,117 @@
+@use "./variables" as *;
+@use "./colors" as *;
+@use "./mixins" as *;
+@use "./functions" as *;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+  width: 100%;
+  transition: $transition;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: rem(12);
+  color: $text-color;
+  font-weight: $font-bold;
+}
+h3,
+h4,
+h5 {
+  font-weight: $font-normal;
+}
+
+//----font-sizes: 16px,28px,32px,36px,42px,48px,54px,60px
+
+h1 {
+  font-size: clamp(px-to-rem(32), px-to-rem(20) + 2vw, px-to-rem(48));
+}
+//----------OR------------------//
+h2 {
+  font-size: clamp(px-to-rem(24), px-to-rem(16) + 1.6vw, px-to-rem(36));
+}
+h3 {
+  font-size: clamp(px-to-rem(20), px-to-rem(14) + 1.6vw, px-to-rem(28));
+}
+h4 {
+  font-size: clamp(px-to-rem(18), px-to-rem(10) + 1.2vw, px-to-rem(24));
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: $transition;
+}
+
+p {
+  margin-top: 0;
+  font-size: $font-base;
+  color: $text-color;
+}
+ul {
+  list-style-type: none;
+}
+main {
+  height: 100%;
+  width: 100%;
+}
+input {
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+section {
+  position: relative;
+  margin-inline: auto;
+  color: $text-color;
+  transition: $transition;
+}
+button {
+  position: relative;
+  padding: $spacing-sm;
+  background: $background-color;
+  color: $text-color-lighter;
+  text-transform: capitalize;
+  border: transparent;
+  border-radius: $rounded-sm;
+  cursor: pointer;
+  transition: $transition;
+  z-index: 1;
+}
+div#root > div,
+div#root > section,
+nav,
+footer,
+header {
+  width: 90vw;
+  margin-inline: auto;
+
+  @include breakpoint-up(medium) {
+    width: 80vw;
+  }
+}
+.center {
+  @include flex(column, center);
+  min-height: 100vh;
+  gap: $spacing-md;
+}

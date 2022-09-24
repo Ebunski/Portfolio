@@ -1,0 +1,28 @@
+@use "../config" as *;
+
+nav {
+  @include flex(row, space-between);
+  height: $header-height;
+  position: sticky;
+}
+.nav {
+  &__logo {
+    font-size: $icon-size;
+  }
+  &__links {
+    @include flex(row);
+    gap: $spacing-md;
+  }
+  &__link {
+    &--icon {
+      @include breakpoint-up(large) {
+        display: none;
+      }
+    }
+  }
+  &__hamburger {
+    @include breakpoint-up(large) {
+      display: none;
+    }
+  }
+}

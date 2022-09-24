@@ -1,0 +1,42 @@
+@use "./functions";
+@use "sass:math" as math;
+
+//function::
+@function px-to-rem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error "Don't add units to the rem() function, only number";
+  }
+}
+
+//font-size
+$font-sm: 0.8rem !default;
+$font-base: 1rem !default;
+$font-md: px-to-rem(20);
+$font-lg: 2rem !default;
+$font-big: 5rem !default;
+
+//font-weight
+$font-normal: 400 !default;
+$font-bold: 600 !default;
+
+//spacing
+$spacing-xs: px-to-rem(5) !default;
+$spacing-sm: px-to-rem(10);
+$spacing-md: 1rem !default;
+$spacing-lg: px-to-rem(20);
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+$spacing-3xl: 4rem;
+
+//transition
+$transition: all 0.5s ease-in-out !default;
+
+//border
+$rounded-sm: px-to-rem(5);
+$rounded-md: px-to-rem(10);
+$rounded-full: 50%;
+
+$header-height: px-to-rem(80 );
+$icon-size: px-to-rem(20);

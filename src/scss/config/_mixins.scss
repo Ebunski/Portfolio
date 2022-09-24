@@ -1,0 +1,96 @@
+@use "./variables" as *;
+@use "./functions" as *;
+@use "./colors" as *;
+@use "sass:map";
+
+//param:default value
+@mixin flex($direction, $justify: false) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  overflow: hidden;
+  @if ($direction == row) {
+    flex-wrap: wrap;
+  }
+
+  @if ($justify != false) {
+    justify-content: $justify;
+  }
+}
+
+@mixin grid($cols, $gap) {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-template-rows: auto;
+  gap: $gap;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+}
+@mixin page-center {
+  @include flex(column, center);
+  min-height: 100vh;
+  gap: $spacing-md;
+}
+@mixin top-right($top, $right) {
+  position: absolute;
+  top: px-to-rem($top);
+  right: px-to-rem($right);
+}
+@mixin top-left($top, $left) {
+  position: absolute;
+  top: px-to-rem($top);
+  left: px-to-rem($left);
+}
+@mixin corner($top-or-bottom, $y, $right-or-left, $x) {
+  position: absolute;
+  #{$top-or-bottom}: #{$y};
+  #{$right-or-left}: #{$x};
+}
+@mixin bottom-center($bottom) {
+  position: absolute;
+  bottom: px-to-rem($bottom);
+  width: 100%;
+}
+@mixin absolute-all($val) {
+  position: absolute;
+  top: $val;
+  left: $val;
+  bottom: $val;
+  right: $val;
+}
+@mixin pseudo {
+  position: absolute;
+  content: "";
+  width: 100%;
+}
+@mixin circle($dimension) {
+  width: $dimension;
+  height: $dimension;
+  border-radius: 50%;
+}
+
+$breakpoints-up: (
+  "small": px-to-em(480),
+  "medium": px-to-em(769),
+  "large": px-to-em(1024),
+  "xlarge": px-to-em(1440),
+) !default;
+$breakpoints-down: (
+  "xsmall": px-to-em(478.98),
+  "small": px-to-em(768.98),
+  "medium": px-to-em(1023.98),
+) !default;
+
+@mixin breakpoint-up($size) {
+  @media only screen and (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media only screen and (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

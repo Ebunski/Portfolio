@@ -1,0 +1,13 @@
+@use "../config/" as *;
+
+.button {
+  padding: rem(14) rem(32);
+  border-radius: 1rem;
+  background: $secondary-color;
+}
+.button-white {
+  @extend .button;
+  background: $background-color;
+  color: $text-color-lighter;
+}
+ 

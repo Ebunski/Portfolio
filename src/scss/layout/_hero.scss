@@ -1,0 +1,64 @@
+@use "../config" as *;
+.hero {
+  @include flex(row, space-between);
+  z-index: 10;
+  margin-top: $header-height;
+  min-height: calc(100vh - #{$header-height});
+  &__links {
+  }
+  &__content {
+    @include flex(column);
+    gap: $spacing-3xl;
+  }
+  &__image-container {
+    position: relative;
+    width: rem(200);
+    height: rem(300);
+    img {
+      @include bottom-center(0);
+      object-fit: cover;
+    }
+  }
+  &__scroll {
+    @include corner(bottom, rem(20), left, 50%);
+    width: 20px;
+    height: 20px;
+    transform: translateY(-80px) translateX(-50%) rotate(45deg);
+    z-index: 10;
+
+    span {
+      @include absolute-all(0);
+      border-bottom: 2px solid #{$primary-color};
+      border-right: 2px solid #{$primary-color};
+      animation: animate 1.5s linear infinite;
+      opacity: 0;
+
+      &:nth-child(1) {
+        transform: translate(-15px, -15px);
+        animation-delay: -0.4s;
+      }
+      &:nth-child(2) {
+        transform: translate(0, 0);
+        animation-delay: -0.2s;
+      }
+      &:nth-child(3) {
+        transform: translate(15px, 15px);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    @include top-left(-5, -5);
+    opacity: 0;
+  }
+  25% {
+    @include top-left(0, 0);
+    opacity: 1;
+  }
+  100% {
+    @include top-left(5, 5);
+    opacity: 0;
+  }
+}
