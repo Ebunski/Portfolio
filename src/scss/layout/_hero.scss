@@ -2,21 +2,36 @@
 .hero {
   @include flex(row, space-between);
   z-index: 10;
-  margin-top: $header-height;
+  // margin-top: $header-height;
   min-height: calc(100vh - #{$header-height});
   &__links {
+    @include flex(column, center);
+    height: 100%;
+    gap: $spacing-lg;
+    color: $primary-color-lighter;
   }
   &__content {
     @include flex(column);
-    gap: $spacing-3xl;
+    align-items: flex-start;
+    p {
+      padding-block: $spacing-lg;
+    }
+    button {
+      background: $primary-color;
+      color: $text-color-lighter;
+    }
   }
   &__image-container {
     position: relative;
-    width: rem(200);
-    height: rem(300);
+    width: rem(300);
+    aspect-ratio: 1 /1;
+    border-radius: 50%;
+    background: $primary-color-lighter;
+    overflow: hidden;
     img {
-      @include bottom-center(0);
-      object-fit: cover;
+      @include corner(top, 0, left, 0);
+      object-fit: contain;
+      width: 100%;
     }
   }
   &__scroll {
@@ -28,8 +43,8 @@
 
     span {
       @include absolute-all(0);
-      border-bottom: 2px solid #{$primary-color};
-      border-right: 2px solid #{$primary-color};
+      border-bottom: 4px solid #{$primary-color};
+      border-right: 4px solid #{$primary-color};
       animation: animate 1.5s linear infinite;
       opacity: 0;
 

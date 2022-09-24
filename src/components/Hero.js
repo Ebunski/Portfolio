@@ -15,7 +15,7 @@ export default function Hero() {
       </ul>
       <div className="hero__content">
         <h1> {hero.title}</h1>
-        <h3> {hero.desc1} </h3>
+        <h4> {hero.desc1} </h4>
         <p> {hero.intro} </p>
         <button>
           {" "}

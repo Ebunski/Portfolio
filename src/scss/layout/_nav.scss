@@ -6,23 +6,43 @@ nav {
   position: sticky;
 }
 .nav {
-  &__logo {
-    font-size: $icon-size;
-  }
   &__links {
     @include flex(row);
-    gap: $spacing-md;
+    gap: $spacing-lg;
+    overflow: visible;
   }
   &__link {
+    &:hover {
+      color: $primary-color;
+    }
+    button {
+      position: relative;
+      padding-bottom: 0;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: rem(4);
+        bottom: 0;
+        left: 0;
+        background: $primary-color;
+        transform-origin: left;
+        transition: $transition;
+        scale: 0 1;
+      }
+      &:hover {
+        transform-origin: right;
+        &::before {
+          scale: 1 1;
+        }
+      }
+    }
     &--icon {
       @include breakpoint-up(large) {
         display: none;
       }
     }
   }
-  &__hamburger {
-    @include breakpoint-up(large) {
-      display: none;
-    }
+  &__switch {
   }
 }

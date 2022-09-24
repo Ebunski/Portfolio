@@ -18,7 +18,7 @@ $font-lg: 2rem !default;
 $font-big: 5rem !default;
 
 //font-weight
-$font-normal: 400 !default;
+$font-normal: normal !default;
 $font-bold: 600 !default;
 
 //spacing
@@ -38,5 +38,5 @@ $rounded-sm: px-to-rem(5);
 $rounded-md: px-to-rem(10);
 $rounded-full: 50%;
 
-$header-height: px-to-rem(80 );
+$header-height: px-to-rem(80);
 $icon-size: px-to-rem(20);
