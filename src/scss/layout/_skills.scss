@@ -1,0 +1,30 @@
+@use "../config" as *;
+
+.skills {
+  .title {
+    padding-block: $spacing-xl;
+  }
+
+  &__content {
+    @include grid(4, 0);
+    padding-block: $spacing-xl;
+    height: 70vh;
+    text-align: center;
+  }
+  &__items {
+    @include flex(column, center);
+    gap: $spacing-xs;
+    width: rem(80);
+    aspect-ratio: 1 / 1;
+    border-radius: $rounded-full;
+    background: $primary-color-lighter;
+
+    div {
+      font-size: $icon-size;
+    }
+    span {
+      color: $text-color-lighter;
+      font-size: $font-sm;
+    }
+  }
+}

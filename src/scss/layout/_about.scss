@@ -35,12 +35,10 @@
   &__text {
     line-height: 1.5;
   }
-  &__contact {
-    @include flex(row, space-between);
-    padding-block: $spacing-md;
-  }
+
   &__cta {
     @include flex(row, center);
-    width: 100%;
+
+    padding-block: $spacing-md;
   }
 }

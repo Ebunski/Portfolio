@@ -57,57 +57,85 @@ export const about = {
 export const skills = [
   {
     icon: <FaHtml5 aria-label="HTML" />,
-    value: "HTML",
+    text: "HTML",
   },
   {
     icon: <FaCss3Alt aria-label="CSS" />,
-    value: "CSS",
+    text: "CSS",
   },
   {
     icon: <IoLogoJavascript aria-label="Javascript" />,
-    value: "Javascript",
+    text: "Javascript",
   },
   {
     icon: <FaReact aria-label="React" />,
-    value: "React",
+    text: "React",
   },
   {
     icon: <IoLogoSass aria-label="Sass" />,
-    value: "Sass",
+    text: "Sass",
   },
   {
     icon: <SiTailwindcss aria-label="Tailwind" />,
-    value: "Tailwind",
+    text: "Tailwind",
   },
   {
     icon: <SiBootstrap aria-label="Bootstrap" />,
-    value: "Bootstrap",
+    text: "Bootstrap",
   },
   {
     icon: <SiRedux aria-label="Redux" />,
-    value: "Redux",
+    text: "Redux",
   },
   {
     icon: <SiFirebase aria-label="Firebase" />,
-    value: "Firebase",
+    text: "Firebase",
   },
   {
     icon: <SiTypescript aria-label="TypeScript" />,
-    value: "TypeScript",
+    text: "TypeScript",
   },
 ];
 
 export const contact = [
   {
     icon: <BsTelephone aria-label="telephone" />,
-    value: "09071621224",
+    text: "09071621224",
   },
   {
     icon: <AiOutlineMail aria-label="email" />,
-    value: "ebunoyebola@gmail.com",
+    text: "ebunoyebola@gmail.com",
   },
   {
     icon: <GrMapLocation aria-label="location" />,
-    value: "Lagos, Nigeria.",
+    text: "Lagos, Nigeria.",
+  },
+];
+
+export const portfolio = [
+  {
+    title: "First Project",
+    image: require("/src/assets/portfolio1.jpg"),
+
+    description: "lorem ipsum",
+    tech: "react javascript",
+    demo: "https://",
+    github: "https://",
+  },
+  {
+    title: "First Project",
+    image: require("/src/assets/portfolio2.jpg"),
+    description: "lorem ipsum",
+    tech: "react javascript",
+    demo: "https://",
+    github: "https://",
+  },
+  {
+    title: "First Project",
+    image: require("/src/assets/portfolio3.jpg"),
+    description: "lorem ipsum",
+    tech: "react javascript",
+    demo: "https://",
+    github: "https://",
   },
 ];

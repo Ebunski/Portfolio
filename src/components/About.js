@@ -16,11 +16,7 @@ export default function About() {
         </div>
         <div className="about__text">
           <p>{about.intro}</p>
-          <div className="about__contact">
-            <p>{about.phone}</p>
-            <p>{about.email}</p>
-            <p> {about.location}</p>
-          </div>
+
           <div className="about__cta">
             <button className="button">
               <a download="" href={cv}>
