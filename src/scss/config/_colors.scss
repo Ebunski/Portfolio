@@ -1,19 +1,23 @@
 ///bg
+/*grreen - 142, blue - 230 pink - 340 */
 :root {
   --hue: 250;
   --hue2: 25;
 }
 
-$primary-color: hsl(var(--hue), 69%, 61%);
-$primary-color-lighter: hsl(var(--hue), 92%, 80%);
-$secondary-color: hsl(var(--hue2), 57%, 53%);
-$secondary-color-lighter: hsl(var(--hue2), 69%, 70%);
-$background-color: hsl(var(--hue), 60%, 99%);
-$surface-color: hsl(var(--hue), 60%, 9 0%);
-$gradient: linear-gradient($primary-color, #e91e63);
-$disabled: hsl(var(--hue), 90%, 85%);
+$primary-color: hsl(var(--hue), 70%, 60%);
+$accent-color: hsl(var(--hue2), 60%, 55%);
 
-///text
+$primary-color-dark: hsl(var(--hue), 57%, 50%);
+$primary-color-light: hsl(var(--hue), 69%, 70%);
+$primary-color-lighter: hsl(var(--hue), 92%, 80%);
+
+$background-color: hsl(var(--hue), 60%, 99%);
+$surface-color: hsl(var(--hue), 60%, 90%);
+
+$gradient: linear-gradient($primary-color, #e91e63);
+
+$text-color-darker: hsl(var(--hue), 8%, 15%);
 $text-color: hsl(var(--hue), 8%, 45%);
 $text-color-lighter: hsl(var(--hue), 8%, 95%);
 $accent-text: hsl(var(--hue2), 57%, 53%);

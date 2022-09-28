@@ -1,13 +1,12 @@
 @use "../config/" as *;
 
 .button {
-  padding: rem(14) rem(32);
-  border-radius: 1rem;
-  background: $secondary-color;
+  background: $primary-color-dark;
+  color: $text-color-lighter;
+  letter-spacing: 1.5px;
 }
 .button-white {
   @extend .button;
   background: $background-color;
   color: $text-color-lighter;
 }
- 

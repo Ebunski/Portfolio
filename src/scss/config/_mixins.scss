@@ -64,6 +64,7 @@
   position: absolute;
   content: "";
   width: 100%;
+  height: 100%;
 }
 @mixin circle($dimension) {
   width: $dimension;

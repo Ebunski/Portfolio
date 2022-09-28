@@ -1,13 +1,13 @@
 import React from "react";
-import { links } from "../data/headerData";
+import { links } from "../data/data";
 import { FaMoon } from "react-icons/fa";
 
 export default function Nav() {
   return (
     <nav>
-      <div className="nav__logo">
+      <button className="nav__logo">
         <h3>Ebun</h3>
-      </div>
+      </button>
       <ul className="nav__links">
         {links.map(({ title, alt, Icon }, index) => (
           <li className="nav__link" key={index}>
@@ -17,7 +17,7 @@ export default function Nav() {
             </button>
           </li>
         ))}
-        <li className="nav__switch">
+        <li className="nav__switch--dark">
           <FaMoon />
         </li>
       </ul>

@@ -1,0 +1,46 @@
+@use "../config" as *;
+
+.about {
+  .title {
+    padding-block: $spacing-xl;
+  }
+
+  &__content {
+    @include grid(2, 0);
+    padding-block: $spacing-xl;
+    height: 70vh;
+    text-align: center;
+  }
+  &__image-container {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: $rounded-md;
+
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      @include pseudo;
+      z-index: -1;
+      background: $primary-color-lighter;
+      top: -30px;
+      left: -30px;
+      border-radius: $rounded-md;
+    }
+    img {
+      z-index: 10;
+      border-radius: $rounded-md;
+    }
+  }
+  &__text {
+    line-height: 1.5;
+  }
+  &__contact {
+    @include flex(row, space-between);
+    padding-block: $spacing-md;
+  }
+  &__cta {
+    @include flex(row, center);
+    width: 100%;
+  }
+}

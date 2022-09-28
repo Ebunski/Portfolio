@@ -17,7 +17,7 @@ html {
 body {
   background-color: $background-color;
   color: $text-color;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
   line-height: 1;
   width: 100%;
@@ -32,7 +32,7 @@ h5 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: rem(12);
-  color: $text-color;
+  color: $text-color-darker;
   font-weight: $font-bold;
 }
 h3,
@@ -58,7 +58,7 @@ h4 {
 }
 
 a {
-  color: $text-color;
+  color: $text-color-lighter;
   text-decoration: none;
   transition: $transition;
 }
@@ -87,6 +87,13 @@ section {
   margin-inline: auto;
   color: $text-color;
   transition: $transition;
+  min-height: 100vh;
+}
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  transition: $transition;
 }
 button {
   font-family: Poppins, sans-serif;
@@ -95,7 +102,7 @@ button {
   background: $background-color;
   color: $text-color-lighter;
   text-transform: capitalize;
-  border: transparent;
+  border: 2px solid transparent;
   border-radius: $rounded-sm;
   cursor: pointer;
   transition: $transition;
@@ -110,6 +117,9 @@ header {
   margin-inline: auto;
 
   @include breakpoint-up(medium) {
+    width: 85vw;
+  }
+  @include breakpoint-up(large) {
     width: 80vw;
   }
 }
@@ -117,4 +127,10 @@ header {
   @include flex(column, center);
   min-height: 100vh;
   gap: $spacing-md;
+}
+.title {
+  text-align: center;
+}
+.subtitle {
+  font-size: $font-sm;
 }

@@ -6,6 +6,9 @@ nav {
   position: sticky;
 }
 .nav {
+  &__logo:hover > * {
+    color: $primary-color;
+  }
   &__links {
     @include flex(row);
     gap: $spacing-lg;
@@ -37,6 +40,9 @@ nav {
         }
       }
     }
+    &--title {
+      font-size: $font-base;
+    }
     &--icon {
       @include breakpoint-up(large) {
         display: none;
@@ -44,5 +50,8 @@ nav {
     }
   }
   &__switch {
+    &--dark {
+      color: $text-color-darker;
+    }
   }
 }

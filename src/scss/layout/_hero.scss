@@ -1,6 +1,9 @@
 @use "../config" as *;
 .hero {
-  @include flex(row, space-between);
+  display: grid;
+  grid-template-columns: 0.8fr 3fr 1fr;
+  justify-items: flex-start;
+  align-items: center;
   z-index: 10;
   // margin-top: $header-height;
   min-height: calc(100vh - #{$header-height});
@@ -8,7 +11,12 @@
     @include flex(column, center);
     height: 100%;
     gap: $spacing-lg;
-    color: $primary-color-lighter;
+
+    a {
+      cursor: pointer;
+      color: $primary-color;
+      font-size: $icon-size;
+    }
   }
   &__content {
     @include flex(column);
@@ -17,8 +25,17 @@
       padding-block: $spacing-lg;
     }
     button {
-      background: $primary-color;
-      color: $text-color-lighter;
+      @include flex(row);
+      gap: $spacing-sm;
+
+      // &:hover {
+      //   background: $background-color;
+      //   border: 2px solid $primary-color;
+      //   color: $text-color-darker;
+      //   .icon {
+      //     translate: rem(5) 0;
+      //   }
+      // }
     }
   }
   &__image-container {
@@ -28,52 +45,9 @@
     border-radius: 50%;
     background: $primary-color-lighter;
     overflow: hidden;
+    transition: $transition;
     img {
       @include corner(top, 0, left, 0);
-      object-fit: contain;
-      width: 100%;
     }
-  }
-  &__scroll {
-    @include corner(bottom, rem(20), left, 50%);
-    width: 20px;
-    height: 20px;
-    transform: translateY(-80px) translateX(-50%) rotate(45deg);
-    z-index: 10;
-
-    span {
-      @include absolute-all(0);
-      border-bottom: 4px solid #{$primary-color};
-      border-right: 4px solid #{$primary-color};
-      animation: animate 1.5s linear infinite;
-      opacity: 0;
-
-      &:nth-child(1) {
-        transform: translate(-15px, -15px);
-        animation-delay: -0.4s;
-      }
-      &:nth-child(2) {
-        transform: translate(0, 0);
-        animation-delay: -0.2s;
-      }
-      &:nth-child(3) {
-        transform: translate(15px, 15px);
-      }
-    }
-  }
-}
-
-@keyframes animate {
-  0% {
-    @include top-left(-5, -5);
-    opacity: 0;
-  }
-  25% {
-    @include top-left(0, 0);
-    opacity: 1;
-  }
-  100% {
-    @include top-left(5, 5);
-    opacity: 0;
   }
 }
