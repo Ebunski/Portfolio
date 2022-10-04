@@ -8,9 +8,9 @@ export default function About() {
     <section className="about">
       <div className="title">
         <h2>About Me</h2>
-        <p className="subtitle">My introduction</p>
+        <span>My introduction</span>
       </div>
-      <div className="about__content">
+      <div className="about__content section-body">
         <div className="about__image-container">
           <img className="about__image" src={image} alt="me" />
         </div>

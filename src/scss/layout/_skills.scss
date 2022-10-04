@@ -1,15 +1,8 @@
 @use "../config" as *;
 
 .skills {
-  .title {
-    padding-block: $spacing-xl;
-  }
-
   &__content {
     @include grid(4, 0);
-    padding-block: $spacing-xl;
-    height: 70vh;
-    text-align: center;
   }
   &__items {
     @include flex(column, center);
@@ -19,9 +12,6 @@
     border-radius: $rounded-full;
     background: $primary-color-lighter;
 
-    div {
-      font-size: $icon-size;
-    }
     span {
       color: $text-color-lighter;
       font-size: $font-sm;

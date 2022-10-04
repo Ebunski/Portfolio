@@ -1,0 +1,41 @@
+@use "../config" as *;
+
+.testimonial {
+  padding-bottom: $spacing-xl;
+  &__body {
+    @include flex(row, center);
+    gap: $spacing-md;
+  }
+  &__wrapper {
+    width: rem(350);
+    background: $surface-color;
+    overflow: hidden;
+    padding: $spacing-lg $spacing-md;
+    border-radius: $rounded-md;
+    box-shadow: $shadow;
+  }
+  &__text {
+    padding-bottom: $spacing-lg;
+    p {
+      line-height: 1.5;
+    }
+  }
+  &__header {
+    @include flex(row, flex-start);
+    gap: $spacing-lg;
+  }
+  &__imageBox {
+    width: rem(80);
+    aspect-ratio: 1 /1;
+    border-radius: $rounded-full;
+    overflow: hidden;
+    &::before {
+    }
+  }
+  &__title {
+    h4 {
+      color: $accent-text;
+      margin-bottom: $spacing-xs;
+    }
+  }
+}

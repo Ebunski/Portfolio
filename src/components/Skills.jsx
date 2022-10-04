@@ -9,13 +9,13 @@ export default function Skills() {
     </div>
   ));
   return (
-    <section class="skills">
+    <section className="skills">
       <div className="title">
         <h2>My skills</h2>
-        <p className="subtitle">My technical level</p>
+        <span>My technical level</span>
       </div>
 
-      <div className="skills__content">{skillList}</div>
+      <div className="skills__content section-body">{skillList}</div>
     </section>
   );
 }

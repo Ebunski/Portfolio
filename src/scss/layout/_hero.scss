@@ -11,12 +11,6 @@
     @include flex(column, center);
     height: 100%;
     gap: $spacing-lg;
-
-    a {
-      cursor: pointer;
-      color: $primary-color;
-      font-size: $icon-size;
-    }
   }
   &__content {
     @include flex(column);
@@ -46,6 +40,8 @@
     background: $primary-color-lighter;
     overflow: hidden;
     transition: $transition;
+    border: 3px solid $primary-color;
+    box-shadow: 2px 2px 5x rgba(0, 0, 0, 0.2);
     img {
       @include corner(top, 0, left, 0);
     }

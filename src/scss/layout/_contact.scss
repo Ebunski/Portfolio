@@ -1,0 +1,45 @@
+@use "../config" as *;
+
+.contact {
+  padding-bottom: $spacing-xl;
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    gap: $spacing-md;
+  }
+  &__container {
+    @include flex(column);
+  }
+  &__info {
+    @include flex(row);
+    width: 100%;
+    gap: $spacing-md;
+    padding-bottom: $spacing-xl;
+  }
+  &__details {
+    text-align: left;
+  }
+
+  form {
+    @include flex(column);
+    align-items: center;
+    gap: $spacing-md;
+    input {
+      border: none;
+      background: $primary-color-lighter;
+      width: rem(400);
+
+      &::placeholder {
+        color: $primary-color-dark;
+      }
+    }
+    textarea {
+      width: rem(400);
+      border-radius: $spacing-sm;
+      text-indent: $spacing-sm;
+    }
+    button {
+    }
+  }
+}

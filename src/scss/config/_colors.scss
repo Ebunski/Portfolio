@@ -1,7 +1,7 @@
 ///bg
 /*grreen - 142, blue - 230 pink - 340 */
 :root {
-  --hue: 250;
+  --hue: 142;
   --hue2: 25;
 }
 
@@ -20,8 +20,7 @@ $gradient: linear-gradient($primary-color, #e91e63);
 $text-color-darker: hsl(var(--hue), 8%, 15%);
 $text-color: hsl(var(--hue), 8%, 45%);
 $text-color-lighter: hsl(var(--hue), 8%, 95%);
-$accent-text: hsl(var(--hue2), 57%, 53%);
+$accent-text: hsl(var(--hue), 57%, 53%);
 
-// $light-shadow-dark: 6px 6px 16px 0 rgba(0, 0, 0, 0.51),
-//   -6px -6px 16px 0 rgba(255, 255, 255, 0.05);
-// $dark-shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+//
+$shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);

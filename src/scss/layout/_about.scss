@@ -7,9 +7,6 @@
 
   &__content {
     @include grid(2, 0);
-    padding-block: $spacing-xl;
-    height: 70vh;
-    text-align: center;
   }
   &__image-container {
     width: 300px;
@@ -22,7 +19,8 @@
     &::before {
       @include pseudo;
       z-index: -1;
-      background: $primary-color-lighter;
+      border: 5px solid $primary-color-light;
+      background: transparent;
       top: -30px;
       left: -30px;
       border-radius: $rounded-md;
@@ -30,6 +28,10 @@
     img {
       z-index: 10;
       border-radius: $rounded-md;
+
+      &:hover {
+        transform: translate(-25px, -25px);
+      }
     }
   }
   &__text {

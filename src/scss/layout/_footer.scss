@@ -1,0 +1,21 @@
+@use "../config" as *;
+
+.footer {
+  padding-bottom: $spacing-xl;
+  background: $primary-color;
+  min-height: rem(100);
+  &--top {
+    @include flex(row, space-between);
+    width: 100%;
+
+    ul {
+      @include flex(row);
+    }
+  }
+  &__logo {
+    @include flex(column);
+    h3 {
+      margin-bottom: $spacing-xs;
+    }
+  }
+}

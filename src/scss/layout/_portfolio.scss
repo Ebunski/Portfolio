@@ -1,0 +1,64 @@
+@use "../config" as *;
+
+.portfolio {
+  padding-bottom: $spacing-xl;
+  &__body {
+    @include flex(row, center);
+    gap: $spacing-md;
+  }
+  &__item--wrapper {
+    width: 350px;
+    border-radius: $rounded-md;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:hover {
+      .portfolio__imageBox::before {
+        transform: translateY(0);
+      }
+      .portfolio__item--text {
+        transform: translateY(30%);
+      }
+    }
+  }
+  &__imageBox {
+    z-index: 1;
+    position: relative;
+    height: 80%;
+
+    &::before {
+      @include pseudo;
+      @include absolute-all(0);
+      z-index: 2;
+      background: $primary-color-lighter;
+      transform: translateY(-100%);
+      opacity: 0.6;
+      transition: $transition;
+    }
+    img {
+      border-radius: $rounded-md;
+    }
+  }
+  &__item--text {
+    @include absolute-all(0);
+    transform: translateY(80%);
+    background: $surface-color;
+    color: $text-color-lighter;
+    z-index: 10;
+    border-radius: $rounded-md $rounded-md 0 0;
+    padding-top: $spacing-md;
+    transition: $transition;
+    p {
+      padding-block: $spacing-md;
+    }
+  }
+  &__item--cta {
+    @include flex(row, center);
+    gap: $spacing-md;
+    .icon {
+      font-size: $icon-size;
+      color: $primary-color;
+    }
+  }
+}

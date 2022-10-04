@@ -43,15 +43,15 @@
   top: px-to-rem($top);
   left: px-to-rem($left);
 }
+@mixin bottom-left($top, $left) {
+  position: absolute;
+  top: px-to-rem($top);
+  left: px-to-rem($left);
+}
 @mixin corner($top-or-bottom, $y, $right-or-left, $x) {
   position: absolute;
   #{$top-or-bottom}: #{$y};
   #{$right-or-left}: #{$x};
-}
-@mixin bottom-center($bottom) {
-  position: absolute;
-  bottom: px-to-rem($bottom);
-  width: 100%;
 }
 @mixin absolute-all($val) {
   position: absolute;
