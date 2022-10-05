@@ -1,12 +1,17 @@
 import React from "react";
 import { testimonials } from "../data/data";
 import { FaQuoteLeft } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 export default function Testimonials() {
   const testimonialsList = testimonials.map(
     ({ image, name, content, title }, index) => (
-      <div className="testimonial__wrapper" key={index}>
-        <FaQuoteLeft aria-label="quote" />
+      <SwiperSlide className="testimonial__wrapper" key={index}>
+        <FaQuoteLeft aria-label="quote" className="icon" />
         <div className="testimonial__text">
           <p>{content}</p>
         </div>
@@ -19,7 +24,7 @@ export default function Testimonials() {
             <span>{title}</span>
           </div>
         </div>
-      </div>
+      </SwiperSlide>
     )
   );
   return (
@@ -29,7 +34,27 @@ export default function Testimonials() {
         <span>My reviews</span>
       </div>
 
-      <div className="testimonial__body section-body">{testimonialsList}</div>
+      <div className="testimonial__body section-body">
+        {" "}
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper"
+        >
+          {testimonialsList}
+        </Swiper>
+      </div>
     </section>
   );
 }
