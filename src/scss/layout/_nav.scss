@@ -39,6 +39,7 @@ nav {
       gap: $spacing-sm;
       padding: $spacing-sm;
       border-radius: $rounded-lg;
+      background: white;
       @include raised;
     }
   }

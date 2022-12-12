@@ -1,12 +1,26 @@
 @use "../config" as *;
 .hero {
-  display: grid;
-  grid-template-columns: 0.8fr 3fr 1fr;
-  justify-items: flex-start;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   z-index: 10;
   margin-top: $header-height;
   min-height: calc(100vh - #{$header-height});
+  @include breakpoint-down(medium) {
+    flex-direction: column-reverse;
+    gap: $spacing-xl;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: $spacing-3xl;
+  }
+  &__group-one {
+    @include flex(row);
+    gap: $spacing-xl;
+    @include breakpoint-up(large) {
+      gap: $spacing-3xl;
+    }
+    align-items: center;
+  }
   &__links {
     @include flex(column, center);
     height: 100%;
@@ -42,6 +56,9 @@
     transition: $transition;
     border: 3px solid $primary-color;
     box-shadow: 2px 2px 5x rgba(0, 0, 0, 0.2);
+    @include breakpoint-down(medium) {
+      width: rem(200);
+    }
     img {
       @include corner(top, 0, left, 0);
     }

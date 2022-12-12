@@ -1,13 +1,23 @@
 import React from "react";
 import { links } from "../data/data";
 import { socialsList } from "./Hero";
+import { Link } from "react-scroll";
 
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
   const linksList = links.map(({ title }, index) => (
     <li key={index}>
-      <a href="/"> {title} </a>
+      <Link
+        to={title}
+        smooth={true}
+        duration={1000}
+        spy={true}
+        exact="true"
+        offset={-80}
+      >
+        {title}
+      </Link>
     </li>
   ));
 

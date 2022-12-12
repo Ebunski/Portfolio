@@ -10,6 +10,7 @@
     width: 350px;
     border-radius: $rounded-md;
     position: relative;
+    height: 250px;
     overflow: hidden;
     z-index: $plain;
 
@@ -25,7 +26,8 @@
   &__imageBox {
     z-index: $plain;
     position: relative;
-    height: 80%;
+    height: 70%;
+    overflow: hidden;
 
     &::before {
       @include pseudo;
@@ -39,6 +41,7 @@
     }
     img {
       border-radius: $rounded-md;
+      object-fit: cover;
     }
   }
   &__item--text {

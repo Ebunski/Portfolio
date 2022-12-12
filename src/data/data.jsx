@@ -109,71 +109,50 @@ export const skills = [
 
 export const portfolio = [
   {
-    title: "First Project",
-    image: require("../assets/portfolio1.jpg"),
-
+    title: "Crappo crypto landing page",
+    image: require("../assets/crypto.jpeg"),
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, tenetur.",
+      "Cool landing page for a crypto website. Built with React, sass and animations using AoS",
 
-    demo: "https://",
-    github: "https://",
+    demo: "https://crypto-landing-page-cat-oe.netlify.app/",
+    github: "https://github.com/Ebunski/crappo-crypto-landing-page",
   },
   {
-    title: "First Project",
-    image: require("../assets/portfolio2.jpg"),
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, tenetur.",
-    demo: "https://",
-    github: "https://",
+    title: "Redux store",
+    image: require("../assets/redux.jpeg"),
+    description: "Shopping store built with redux and sass",
+    demo: "https://redux-cart-oe.netlify.app/",
+    github: "https://github.com/Ebunski/Redux-store",
   },
   {
-    title: "First Project",
-    image: require("../assets/portfolio3.jpg"),
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, tenetur.",
-    demo: "https://",
-    github: "https://",
-  },
-
-  {
-    title: "First Project",
-    image: require("../assets/portfolio3.jpg"),
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, tenetur.",
-    tech: "react javascript",
-    demo: "https://",
-    github: "https://",
+    title: "Quiz app",
+    image: require("../assets/quiz.png"),
+    description: "Modern quiz app built with React",
+    demo: "https://quiz-app-oe.netlify.app/",
+    github: "https://quiz-app-oe.netlify.app/",
   },
 ];
 export const testimonials = [
   {
-    name: "Daniel Duliyemi",
-    image: require("../assets/avatar1.jpg"),
+    name: "John",
+    image: require("../assets/one.jpg"),
     title: "Frontend Developer",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quod vitae repellendus at minus facilis repellat atque natus in molestiae?",
+      "Ebun is an incredible team player and developer. Worked on a couple of projects together and the partnership was wonderful. ",
   },
   {
-    name: "Daniel Duliyemi",
-    image: require("../assets/avatar2.jpg"),
-    title: "Frontend Developer",
+    name: "Peter",
+    image: require("../assets/quote3.jpg"),
+    title: "Client",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quod vitae repellendus at minus facilis repellat atque natus in molestiae?",
+      "It was a pleasure working with Ebun. He was extremely patient and managed the project very professionally. I highly recommend Ebun to anyone looking to build a new website.",
   },
   {
-    name: "Daniel Duliyemi",
-    image: require("../assets/avatar3.jpg"),
-    title: "Frontend Developer",
+    name: "Rejoice",
+    image: require("../assets/quote1.jpg"),
+    title: "Developer",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quod vitae repellendus at minus facilis repellat atque natus in molestiae?",
-  },
-
-  {
-    name: "Daniel Duliyemi",
-    image: require("../assets/avatar4.jpg"),
-    title: "Frontend Developer",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quod vitae repellendus at minus facilis repellat atque natus in molestiae?",
+      "Ebun is a brilliant developer. He always comes up with a different approach to a problem",
   },
 ];
 

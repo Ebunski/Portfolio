@@ -7,10 +7,17 @@
 
   &__content {
     @include grid(2, 0);
+    @include breakpoint-down(medium) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
   }
   &__image-container {
     width: 300px;
     aspect-ratio: 1 / 1;
+    @include breakpoint-down(medium) {
+      width: 200px;
+    }
     border-radius: $rounded-md;
 
     position: relative;

@@ -5,6 +5,9 @@
   &__body {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    @include breakpoint-down(medium) {
+      grid-template-columns: 1fr;
+    }
     align-items: center;
     gap: $spacing-md;
   }

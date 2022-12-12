@@ -2,7 +2,7 @@ import React from "react";
 import useScroll from "../hooks/useScrollPosition";
 
 import { links } from "../data/data";
-import { FaMoon } from "react-icons/fa";
+// import { FaMoon } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 export default function Nav() {
@@ -44,9 +44,9 @@ export default function Nav() {
           ))}
         </ul>
 
-        <div className="nav__switch">
+        {/* <div className="nav__switch">
           <FaMoon />
-        </div>
+        </div> */}
       </div>
     </nav>
   );

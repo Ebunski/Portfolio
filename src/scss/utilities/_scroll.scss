@@ -1,5 +1,8 @@
 @use "../config" as *;
 .scroll {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
   @include corner(bottom, rem(20), left, 50%);
   width: 20px;
   height: 20px;

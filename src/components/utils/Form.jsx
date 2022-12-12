@@ -16,6 +16,7 @@ export default function Form() {
   };
   const serviceId = "service_49diwgo";
   const templateId = "template_ofgqrif";
+  const emailKey = "lCaNAcSA7sStI6Yxl";
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -25,7 +26,7 @@ export default function Form() {
         serviceId,
         templateId,
         formRef.current,
-        process.env.REACT_APP_EMAILJS_KEY
+        emailKey
       );
       setStatus(response.status);
     } catch (err) {

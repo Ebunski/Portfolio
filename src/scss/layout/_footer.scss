@@ -1,21 +1,32 @@
 @use "../config" as *;
 
 .footer {
-  padding-bottom: $spacing-xl;
   color: $text-color-lighter;
   background: $primary-color;
   width: 100%;
-  padding-block: $spacing-2xl;
+  padding-top: $spacing-2xl;
+  padding-bottom: rem(100);
 
   &--top {
     @include flex(row, space-between);
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
     margin-inline: auto;
 
     ul {
       @include flex(row);
+
       gap: $spacing-md;
+      &.footer__links {
+        @include breakpoint-down(medium) {
+          flex-direction: column;
+        }
+      }
     }
   }
+
   &__logo {
     @include flex(column);
     button {
