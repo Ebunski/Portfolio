@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/me-about.jpg";
+import image from "../assets/ebun-about.jpg";
 import cv from "../assets/cv.pdf";
 import { about } from "../data/data";
 
