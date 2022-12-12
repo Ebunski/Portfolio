@@ -1,7 +1,7 @@
 import React from "react";
 import { hero, socials } from "../data/data";
 import { BiSend } from "react-icons/bi";
-import me from "../assets/me-hero.png";
+import me from "../assets/me-hero.jpg";
 import Scroll from "./utils/Scroll";
 import { Link } from "react-scroll";
 

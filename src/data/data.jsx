@@ -6,7 +6,7 @@ import {
   BsTools,
   BsImages,
   BsTelephone,
-  BsFillPlusCircleFill,
+  // BsFillPlusCircleFill,
 } from "react-icons/bs";
 import {
   FaLinkedin,
@@ -15,7 +15,7 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaReact,
-  FaArrowUp,
+  // FaArrowUp,
 } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { GrMapLocation } from "react-icons/gr";
@@ -44,7 +44,11 @@ export const socials = [
     link: "https://www.linkedin.com/in/ebunoluwa-oyebola-1490021b1",
   },
   { title: "GitHub", Icon: FaGithub, link: "https://github.com/Ebunski/" },
-  { title: "Twitter", Icon: FaTwitter, link: "https://www.twitter.com/Ebun_ski" },
+  {
+    title: "Twitter",
+    Icon: FaTwitter,
+    link: "https://www.twitter.com/Ebun_ski",
+  },
 ];
 
 export const hero = {
