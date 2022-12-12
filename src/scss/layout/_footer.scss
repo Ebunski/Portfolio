@@ -2,20 +2,38 @@
 
 .footer {
   padding-bottom: $spacing-xl;
+  color: $text-color-lighter;
   background: $primary-color;
-  min-height: rem(100);
+  width: 100%;
+  padding-block: $spacing-2xl;
+
   &--top {
     @include flex(row, space-between);
-    width: 100%;
+    margin-inline: auto;
 
     ul {
       @include flex(row);
+      gap: $spacing-md;
     }
   }
   &__logo {
     @include flex(column);
+    button {
+      background: transparent;
+    }
     h3 {
       margin-bottom: $spacing-xs;
+      color: $text-color-lighter;
     }
+  }
+
+  &__socials {
+    .icon {
+      color: $text-color-lighter;
+    }
+  }
+  &--bottom {
+    @include flex(row, center);
+    margin-top: $spacing-lg;
   }
 }

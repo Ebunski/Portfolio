@@ -35,8 +35,17 @@ $transition: all 0.5s ease-in-out !default;
 
 //border
 $rounded-sm: px-to-rem(5);
-$rounded-md: px-to-rem(10);
+$rounded-md: px-to-rem(15);
+$rounded-lg: px-to-rem(30);
 $rounded-full: 50%;
 
+//sizes
 $header-height: px-to-rem(80);
 $icon-size: px-to-rem(20);
+$icon-size-lg: px-to-rem(30);
+
+//z-index
+$valley: -1;
+$plain: 1;
+$hill: 10;
+$mountain: 100;

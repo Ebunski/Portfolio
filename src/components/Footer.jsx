@@ -12,16 +12,16 @@ export default function Footer() {
   ));
 
   return (
-    <footer>
-      <div className="footer--top">
+    <footer className="footer">
+      <div className="footer--top section-container">
         <div className="footer__logo">
-          <button className="nav__logo">
+          <button>
             <h3>Ebun</h3>
           </button>
           <span>Frontend Developer</span>
         </div>
         <ul className="footer__links">{linksList}</ul>
-        <ul>{socialsList}</ul>
+        <ul className="footer__socials">{socialsList}</ul>
       </div>
 
       <div className="footer--bottom">

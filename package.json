@@ -9,7 +9,11 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
-    "gasp": "^0.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "gsap": "^3.11.3",
+    "nodemon": "^2.0.20",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
@@ -21,6 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start:backend": "nodemon backend.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

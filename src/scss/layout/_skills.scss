@@ -7,14 +7,24 @@
   &__items {
     @include flex(column, center);
     gap: $spacing-xs;
-    width: rem(80);
+    width: rem(90);
     aspect-ratio: 1 / 1;
     border-radius: $rounded-full;
-    background: $primary-color-lighter;
+    background-color: rgba(255, 255, 255, 0.1), green;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    // background: ;
 
     span {
-      color: $text-color-lighter;
+      color: $text-color-darker;
       font-size: $font-sm;
+    }
+    .icon {
+      color: $primary-color-dark;
+      font-size: $icon-size-lg;
     }
   }
 }

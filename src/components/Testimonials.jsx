@@ -2,10 +2,9 @@ import React from "react";
 import { testimonials } from "../data/data";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 
 export default function Testimonials() {
   const testimonialsList = testimonials.map(
@@ -28,7 +27,7 @@ export default function Testimonials() {
     )
   );
   return (
-    <section className="testimonial">
+    <section className="testimonial" id="Testimonial">
       <div className="title">
         <h2>testimonials</h2>
         <span>My reviews</span>
@@ -41,15 +40,15 @@ export default function Testimonials() {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
+          loop={true}
           coverflowEffect={{
-            rotate: 50,
+            rotate: 0,
             stretch: 0,
             depth: 100,
-            modifier: 1,
+            modifier: 2,
             slideShadows: true,
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow]}
           className="mySwiper"
         >
           {testimonialsList}

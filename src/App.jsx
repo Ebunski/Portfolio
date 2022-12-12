@@ -11,7 +11,7 @@ import Footer from "./components/Footer.jsx";
 export default function App() {
   return (
     <>
-      <header>
+      <header id="header">
         <Nav />
         <Hero />
       </header>

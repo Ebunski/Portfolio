@@ -23,7 +23,7 @@
       background: transparent;
       top: -30px;
       left: -30px;
-      border-radius: $rounded-md;
+      border-radius: calc($rounded-md + rem(5));
     }
     img {
       z-index: 10;

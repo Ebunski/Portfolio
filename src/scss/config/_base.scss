@@ -3,7 +3,7 @@
 @use "./mixins" as *;
 @use "./functions" as *;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
-
+@import "animate.css";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,6 +61,8 @@ a {
   color: $text-color-lighter;
   text-decoration: none;
   transition: $transition;
+  cursor: pointer;
+  display: inline-block;
 }
 
 p {
@@ -105,21 +107,20 @@ img {
 button {
   font-family: Poppins, sans-serif;
   position: relative;
-  padding: $spacing-sm;
   background: $background-color;
   color: $text-color-lighter;
   text-transform: capitalize;
+  padding: $spacing-sm;
   border: 2px solid transparent;
   border-radius: $rounded-sm;
   cursor: pointer;
   transition: $transition;
   z-index: 1;
 }
-main,
-header,
-footer {
+main {
   width: 90vw;
   margin-inline: auto;
+  position: relative;
 
   @include breakpoint-up(medium) {
     width: 85vw;
@@ -128,6 +129,18 @@ footer {
     width: 80vw;
   }
 }
+
+.section-container {
+  margin-inline: auto;
+  width: 90vw;
+  @include breakpoint-up(medium) {
+    width: 85vw;
+  }
+  @include breakpoint-up(large) {
+    width: 80vw;
+  }
+}
+
 .center {
   @include flex(column, center);
   min-height: 100vh;
@@ -145,6 +158,6 @@ footer {
 .section-body {
   width: 100%;
   padding-block: $spacing-xl;
-  min-height: 80vh;
+  min-height: 70vh;
   text-align: center;
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import { hero, socials } from "../data/data";
 import { BiSend } from "react-icons/bi";
-import me from "../assets/me.png";
+import me from "../assets/me-hero.png";
 import Scroll from "./utils/Scroll";
+import { Link } from "react-scroll";
 
 export const socialsList = socials.map(({ title, Icon, link }, index) => (
   <li key={index}>
@@ -13,15 +14,23 @@ export const socialsList = socials.map(({ title, Icon, link }, index) => (
 ));
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero section-container">
       <ul className="hero__links">{socialsList}</ul>
       <div className="hero__content">
         <h1> {hero.title}</h1>
         <h4> {hero.desc1} </h4>
         <p> {hero.intro} </p>
         <button className="button">
-          {" "}
-          Contact Me <BiSend className="hero__icon" />{" "}
+          <Link
+            to={"Contact"}
+            smooth={true}
+            duration={1200}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Contact Me <BiSend className="hero__icon" />{" "}
+          </Link>
         </button>
       </div>
 

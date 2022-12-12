@@ -38,4 +38,19 @@
       margin-bottom: $spacing-xs;
     }
   }
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right {
+    background-image: none;
+  }
+  .swiper-slide {
+    filter: blur(4px);
+    background: $primary-color-light;
+  }
+  .swiper-slide-active {
+    filter: blur(0px);
+    background: $surface-color;
+  }
+  .mySwiper {
+    padding-block: $spacing-xl;
+  }
 }

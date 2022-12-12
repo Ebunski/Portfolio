@@ -5,7 +5,7 @@ import { about } from "../data/data";
 
 export default function About() {
   return (
-    <section className="about">
+    <section className="about" id={"About"}>
       <div className="title">
         <h2>About Me</h2>
         <span>My introduction</span>

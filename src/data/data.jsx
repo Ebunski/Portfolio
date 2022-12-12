@@ -6,6 +6,7 @@ import {
   BsTools,
   BsImages,
   BsTelephone,
+  BsFillPlusCircleFill,
 } from "react-icons/bs";
 import {
   FaLinkedin,
@@ -14,6 +15,7 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaReact,
+  FaArrowUp,
 } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { GrMapLocation } from "react-icons/gr";
@@ -28,17 +30,21 @@ import {
 } from "react-icons/si";
 
 export const links = [
-  { title: "About", alt: "about", Icon: BiUser },
-  { title: "Skills", alt: "Skills", Icon: BsTools },
-  { title: "Portfolio", alt: "Projects", Icon: BsImages },
-  { title: "Testimonial", alt: "Testimonial", Icon: BsChatRightQuote },
-  { title: "Contact Me", alt: "Contactme", Icon: BiSend },
+  { title: "About", Icon: BiUser },
+  { title: "Skills", Icon: BsTools },
+  { title: "Portfolio", Icon: BsImages },
+  { title: "Testimonial", Icon: BsChatRightQuote },
+  { title: "Contact", Icon: BiSend },
 ];
 
 export const socials = [
-  { title: "LinkedIn", Icon: FaLinkedin, link: "https://" },
-  { title: "GitHub", Icon: FaGithub, link: "https://" },
-  { title: "Twitter", Icon: FaTwitter, link: "https://" },
+  {
+    title: "LinkedIn",
+    Icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/ebunoluwa-oyebola-1490021b1",
+  },
+  { title: "GitHub", Icon: FaGithub, link: "https://github.com/Ebunski/" },
+  { title: "Twitter", Icon: FaTwitter, link: "https://www.twitter.com/Ebun_ski" },
 ];
 
 export const hero = {
@@ -56,7 +62,7 @@ export const about = {
 
 export const skills = [
   {
-    icon: <FaHtml5 aria-label="HTML" className="icon" />,
+    icon: <FaHtml5 aria-label="HTML" className="icon" style={{}} />,
     text: "HTML",
   },
   {
@@ -88,7 +94,7 @@ export const skills = [
     text: "Redux",
   },
   {
-    icon: <SiFirebase aria-label="Firebase" className="icon" />,
+    icon: <SiFirebase aria-label="Firebase" className="icon" style={{}} />,
     text: "Firebase",
   },
   {

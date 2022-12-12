@@ -9,13 +9,18 @@ export default function Skills() {
     </div>
   ));
   return (
-    <section className="skills">
+    <section className="skills" id="Skills">
       <div className="title">
         <h2>My skills</h2>
         <span>My technical level</span>
       </div>
 
       <div className="skills__content section-body">{skillList}</div>
+      {/* <div className="skills__content section-body">
+        <canvas width = "500" height = "500">
+           </canvas>
+      </div> */}
+
     </section>
   );
 }

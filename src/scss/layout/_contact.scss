@@ -24,21 +24,19 @@
   form {
     @include flex(column);
     align-items: center;
-    gap: $spacing-md;
-    input {
+    gap: $spacing-lg;
+    input,
+    textarea {
       border: none;
-      background: $primary-color-lighter;
+      background: $surface-color;
       width: rem(400);
+      text-indent: $spacing-sm;
 
       &::placeholder {
         color: $primary-color-dark;
       }
     }
-    textarea {
-      width: rem(400);
-      border-radius: $spacing-sm;
-      text-indent: $spacing-sm;
-    }
+
     button {
     }
   }

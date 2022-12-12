@@ -11,7 +11,7 @@
     border-radius: $rounded-md;
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: $plain;
 
     &:hover {
       .portfolio__imageBox::before {
@@ -23,18 +23,19 @@
     }
   }
   &__imageBox {
-    z-index: 1;
+    z-index: $plain;
     position: relative;
     height: 80%;
 
     &::before {
       @include pseudo;
       @include absolute-all(0);
-      z-index: 2;
-      background: $primary-color-lighter;
+      z-index: $hill;
+      background: black;
       transform: translateY(-100%);
       opacity: 0.6;
       transition: $transition;
+      filter: blur(4px);
     }
     img {
       border-radius: $rounded-md;
@@ -45,7 +46,7 @@
     transform: translateY(80%);
     background: $surface-color;
     color: $text-color-lighter;
-    z-index: 10;
+    z-index: $hill;
     border-radius: $rounded-md $rounded-md 0 0;
     padding-top: $spacing-md;
     transition: $transition;
