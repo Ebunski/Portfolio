@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import axios from "axios";
 
 export default function Form() {
   const [status, setStatus] = useState(null);
