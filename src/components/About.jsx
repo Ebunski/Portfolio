@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../assets/ebun-about.jpg";
-import cv from "../assets/cv.pdf";
+import cv from "../assets/cv2.pdf";
 import { about } from "../data/data";
 
 export default function About() {
